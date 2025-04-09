@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+@import "style/variables.sass"
+@import "style/utility.sass"
+
+* 
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+  font-family: Arial, sans-serif
+
+main
+  padding: 0
+  width: 100%
+
+  /* Tablet styles */
+@media (min-width: 768px) 
+  .main 
+    @include main-styles(768px, blue)
+  
+
+/* Desktop styles */
+@media (min-width: 1024px) 
+  .main
+    @include main-styles(960px, red)
+  
+
+/* Larger desktop styles */
+@media (min-width: 1200px) 
+  .main 
+    @include main-styles(1140px, orange)
+  
